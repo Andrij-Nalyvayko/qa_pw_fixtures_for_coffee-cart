@@ -1,14 +1,12 @@
-import { test } from '@playwright/test';
+import { test } from '../fixtures/fixtures';
 import { MenuPage } from '../../src/pages/MenuPage';
 import { CartPage } from '../../src/pages/CartPage';
 import { COFFEE_PRICES } from '../../src/constants';  
 import { unitPriceFormatStr, priceFormatStr, totalPriceFormatStr } from '../../src/common/helpers/getPriceForQuantity';
 
 test('Assert discounted Mocha added to the Cart after promo accepting', async ({
-  page,
+  page,menuPage, cartPage
 }) => {
-  const menuPage = new MenuPage(page);
-  const cartPage = new CartPage(page);
 
   await menuPage.open();
   await menuPage.clickCappucinoCup();
