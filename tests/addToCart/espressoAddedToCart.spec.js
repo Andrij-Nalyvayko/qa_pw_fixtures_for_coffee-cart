@@ -1,12 +1,11 @@
-import { test } from '@playwright/test';
+import { test } from '../fixtures/fixtures';
 import { MenuPage } from '../../src/pages/MenuPage';
 import { CartPage }from '../../src/pages/CartPage';
 import { unitPriceFormatStr, totalPriceFormatStr, priceFormatStr } from '../../src/common/helpers/getPriceForQuantity';
 import { COFFEE_PRICES } from '../../src/constants';
 
-test('Check Espresso correctly added to the Cart', async ({ page }) => {
-  const menuPage = new MenuPage(page);
-  const cartPage = new CartPage(page);
+test('Check Espresso correctly added to the Cart', async ({ page, menuPage, cartPage }) => {
+
       
   await menuPage.open();
   await menuPage.clickEspressoCup();

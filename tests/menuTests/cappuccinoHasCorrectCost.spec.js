@@ -1,6 +1,4 @@
 import { test } from '../fixtures/fixtures';
-
-import { MenuPage } from '../../src/pages/MenuPage';
 import { COFFEE_PRICES } from '../../src/constants';
 import { unitPriceFormatStr, priceFormatStr, totalPriceFormatStr } from '../../src/common/helpers/getPriceForQuantity';
 
